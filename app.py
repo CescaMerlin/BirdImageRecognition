@@ -32,7 +32,7 @@ def index():
 
 @app.route('/predict',methods=['GET','POST'])
 def makePrediction():
-    imgpath = request.form.get('data')
+    imgpath = request.args.get('data')
     class_names = ['Asio otus', 'Bubo blakistoni', 'Ninox japonica', 'Otus elegans', 'Strix uralensis']
     if imgpath == None:
         return 'Got None'
