@@ -4,7 +4,7 @@ from tensorflow import keras
 from flask import Flask,request
 from keras.models import load_model
 
-gpus = tf.config.experimental.list_physical_devices('GPU')
+""" gpus = tf.config.experimental.list_physical_devices('GPU')
 if gpus:
   try:
     # Currently, memory growth needs to be the same across GPUs
@@ -15,7 +15,7 @@ if gpus:
   except RuntimeError as e:
     # Memory growth must be set before GPUs have been initialized
     print(e)
-
+"""
 
 model = load_model('owl_recognition_model.h5')
 print("HERE", model)
