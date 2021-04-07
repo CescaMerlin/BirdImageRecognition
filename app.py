@@ -1,10 +1,14 @@
 import tensorflow as tf
 import numpy as np
+import requests
+import imageio
+from PIL import Image
 from tensorflow import keras
 from flask import Flask,request
 from keras.models import load_model
 
-""" gpus = tf.config.experimental.list_physical_devices('GPU')
+"""
+gpus = tf.config.experimental.list_physical_devices('GPU')
 if gpus:
   try:
     # Currently, memory growth needs to be the same across GPUs
@@ -18,7 +22,6 @@ if gpus:
 """
 
 model = load_model('owl_recognition_model.h5')
-print("HERE", model)
 
 # create the flask object
 app = Flask(__name__)
@@ -34,8 +37,9 @@ def makePrediction():
     if imgpath == None:
         return 'Got None'
     else:
-        img = keras.preprocessing.image.load_img(imgpath, target_size=(160,160))
-        img_array = keras.preprocessing.image.img_to_array(img)
+        im = imageio.imread(imgpath)
+        im = Image.fromarray(im).resize((160,160))
+        img_array = keras.preprocessing.image.img_to_array(im)
         img_array = tf.expand_dims(img_array, 0) # Create a batch
 
         predictions = model.predict(img_array)
