@@ -8,6 +8,8 @@ Figure_1.png
 yo.h5
 testaccess.py
 
+.slugignore
+
 Owls/
 
 # Byte-compiled / optimized / DLL files
