@@ -18,4 +18,4 @@ To install BirdImageRecognition, follow these steps:
 ```
 
 # Presentation Slide Deck
-Slides: [<google_slides>](<https://docs.google.com/presentation/d/1SY2lq3x1mPxDGYH25CfF5apq2GkaCg2b6weD8d7hgbs/edit?usp=sharing>)
+Slides: [<google_slides>](https://docs.google.com/presentation/d/1SY2lq3x1mPxDGYH25CfF5apq2GkaCg2b6weD8d7hgbs/edit?usp=sharing)
