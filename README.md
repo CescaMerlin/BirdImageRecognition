@@ -23,5 +23,5 @@ This model is currently deployed on Heroku at [OwlIdentifier](https://owl-image-
 Go to endpoint </predict?data=>
 Then paste the url of the image you would like to check at the end
 
-# Presentation Slide Deck
+## Presentation Slide Deck
 Slides: [<google_slides>](https://docs.google.com/presentation/d/1SY2lq3x1mPxDGYH25CfF5apq2GkaCg2b6weD8d7hgbs/edit?usp=sharing)
